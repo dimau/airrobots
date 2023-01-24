@@ -1,16 +1,18 @@
 @font-face {
-  font-family: acrom;
-  src: url("../fonts/Acrom-Regular.woff2");
+  font-family: "Ushakov";
+  src: url("../fonts/Ushakov-Regular.woff2");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: acrom;
-  src: url("../fonts/Acrom-Bold.woff2");
+  font-family: "Ushakov";
+  src: url("../fonts/Ushakov-Bold.woff2");
   font-weight: bold;
+  font-display: swap;
 }
 
 :root {
-  --font-family-acrom: acrom, sans-serif;
+  --font-family-acrom: "Ushakov", sans-serif;
   --font-color-light: #fff;
   --font-color-dark: #000;
   --font-color-gray: #626262;
