@@ -349,3 +349,37 @@ a {
   background-image: url("../images/advantage-6.png");
   left: -100px;
 }
+
+/*****************/
+/***** Video *****/
+/*****************/
+
+.video {
+  background: radial-gradient(circle at 50% 90%, #606060 0, #2e2e2e 100%);
+  padding-top: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.video__title {
+  text-align: center;
+  color: var(--font-color-light);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.video__phones {
+  width: 951px;
+  height: 506px;
+}
+
+.video__youtube-button {
+  width: 83px;
+  height: 57px;
+  position: absolute;
+  bottom: 187px;
+  left: 50%;
+  transform: translateX(-41px);
+  background-image: url("../images/youtube.png");
+}
+
