@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Air Robots</title>
-    <link rel="stylesheet" href="styles/normalize.css"/>
-    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/favicon.ico" sizes="any">
 </head>
 <body>
 
-<header class="header">
+<header class="header" id="main">
     <div class="container">
         <div class="header__inner">
             <div class="header__logo-block">
@@ -36,13 +36,13 @@
         <nav class="nav">
             <div class="container">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
-                    /
-                    <li class="nav__item"><a href="#" class="nav__link">Видео</a></li>
-                    /
-                    <li class="nav__item"><a href="#" class="nav__link">Наши преимущества</a></li>
-                    /
-                    <li class="nav__item"><a href="#" class="nav__link">Характеристики и цены</a></li>
+                    <li class="nav__item"><a href="#main" class="nav__link">Главная</a></li>
+                    <li>/</li>
+                    <li class="nav__item"><a href="#video" class="nav__link">Видео</a></li>
+                    <li>/</li>
+                    <li class="nav__item"><a href="#reasons" class="nav__link">Наши преимущества</a></li>
+                    <li>/</li>
+                    <li class="nav__item"><a href="#products" class="nav__link">Характеристики и цены</a></li>
                 </ul>
             </div>
         </nav>
@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <section class="video">
+    <section class="video" id="video">
         <div class="container">
             <h2 class="video__title">Прямая трансляция на экране<br>твоего смартфона</h2>
             <img src="images/video-phones.png" alt="Декоративное изображение экранов телефонов" class="video__phones">
@@ -125,7 +125,7 @@
         </div>
     </section>
 
-    <section class="reasons">
+    <section class="reasons" id="reasons">
         <div class="container">
             <h2 class="reasons__title">Почему нужно покупать на Airrobots.ru?</h2>
             <div class="reasons__inner">
@@ -171,7 +171,7 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="products" id="products">
         <h2 class="products__title">
             Выбери свой комплект на базе DJI Phantom 2
         </h2>
@@ -208,7 +208,8 @@
 
                 <li class="products__product-card">
                     <div class="products__upper-block">
-                        <img src="images/products-2.png" alt="Изображение квадрокоптера Phantom 2 с подвесом для камеры Zenmuse H4-3D"
+                        <img src="images/products-2.png"
+                             alt="Изображение квадрокоптера Phantom 2 с подвесом для камеры Zenmuse H4-3D"
                              class="products__product-image">
                         <div class="products__upper-block-desc">
                             <p class="products__price">59 360 руб.</p>
@@ -236,6 +237,47 @@
         </div>
     </section>
 
+    <section class="capture-form">
+        <div class="container">
+            <h2 class="capture-form__title">
+                <label for="capture-form__phone-input">
+                    Еще думаете? Оставьте свой номер,<br>
+                    Мы поможем определиться
+                </label>
+            </h2>
+            <form class="capture-form__form">
+                <div class="capture-form__phone-input-box">
+                    <input type="text" class="capture-form__phone-input" id="capture-form__phone-input"
+                           placeholder="Ваш номер телефона">
+                </div>
+                <button class="capture-form__submit-button" type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
 </main>
+
+<footer class="footer">
+        <ul class="nav__list footer__nav-list">
+            <li class="nav__item"><a href="#main" class="nav__link">Главная</a></li>
+            <li>/</li>
+            <li class="nav__item"><a href="#video" class="nav__link">Видео</a></li>
+            <li>/</li>
+            <li class="nav__item"><a href="#reasons" class="nav__link">Наши преимущества</a></li>
+            <li>/</li>
+            <li class="nav__item"><a href="#products" class="nav__link">Характеристики и цены</a></li>
+        </ul>
+
+        <div class="footer__info-block">
+            <p class="footer__company-name">ООО 'Адамант'</p>
+            <a class="footer__phone" href="tel:83433285504">+7 (343) 328 55 04</a>
+            <a class="footer__mail" href="mailto:help@airrobots.ru">help@airrobots.ru</a>
+            <p class="footer__cancel">
+                Вся предоставленная информация не является публичной офертой
+                <br>Цены и комплектация могут отличаться от указанных.
+            </p>
+        </div>
+</footer>
+
 </body>
 </html>
