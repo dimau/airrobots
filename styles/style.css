@@ -27,6 +27,7 @@ html {
   scroll-behavior: smooth;
   line-height: 1.2;
   font-family: var(--font-family-acrom);
+  color: var(--font-color-dark);
 }
 
 *, *::before, *::after {
@@ -383,3 +384,80 @@ a {
   background-image: url("../images/youtube.png");
 }
 
+/*******************/
+/***** Reasons *****/
+/*******************/
+
+.reasons {
+  padding-top: 60px;
+}
+
+.reasons__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.reasons__inner {
+  display: flex;
+  gap: 20px;
+}
+
+.reasons__product-img {
+  width: 426px;
+  height: 457px;
+}
+
+.reasons__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 0;
+  padding-left: 136px;
+  text-align: left;
+}
+
+.reasons__reason-box {
+  position: relative;
+}
+
+.reason-1::before,
+.reason-2::before,
+.reason-3::before,
+.reason-4::before {
+  content: "";
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  transform: translateY(-36px);
+}
+
+.reason-1::before {
+  background-image: url("../images/reason-1.png");
+}
+
+.reason-2::before {
+  background-image: url("../images/reason-2.png");
+}
+
+.reason-3::before {
+  background-image: url("../images/reason-3.png");
+}
+
+.reason-4::before {
+  background-image: url("../images/reason-4.png");
+}
+
+.reasons__reason-title {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.reasons__reason-desc {
+  margin-left: 0;
+}
