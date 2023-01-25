@@ -139,6 +139,11 @@ a {
   text-align: center;
 }
 
+/* For sticky menu */
+.promo.navbarOffsetMargin {
+  padding-top: 39px;
+}
+
 .promo::after {
   content: "";
   background-image: url("../images/copter.png");
@@ -223,6 +228,14 @@ a {
   color: var(--font-color-light);
 }
 
+.nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 .nav__list {
   margin: 0;
   display: flex;
@@ -238,6 +251,10 @@ a {
 .nav__link {
   text-decoration: none;
   color: var(--font-color-light);
+}
+
+.nav__link.active {
+  font-weight: bold;
 }
 
 /**********************/
