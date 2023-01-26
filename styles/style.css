@@ -405,16 +405,21 @@ a {
   font-weight: normal;
 }
 
+.video__picture-box {
+  position: relative;
+}
+
 .video__phones {
-  width: 951px;
-  height: 506px;
+  width: 100%;
+  max-width: 951px;
+  max-height: 506px;
 }
 
 .video__youtube-button {
   width: 83px;
   height: 57px;
   position: absolute;
-  bottom: 187px;
+  bottom: 37%;
   left: 50%;
   transform: translateX(-41px);
   background-image: url("../images/youtube.png");
@@ -882,6 +887,10 @@ a {
   .advantages {
     padding-top: 100px;
   }
+
+  .video__youtube-button {
+    bottom: 45%;
+  }
 }
 
 @media (max-width: 570px) {
@@ -898,6 +907,14 @@ a {
 @media (max-width: 500px){
   .advantages {
     padding-top: 60px;
+  }
+
+  .video__title {
+    margin-top: 0;
+  }
+
+  .video__youtube-button {
+    bottom: 40%;
   }
 }
 
