@@ -396,6 +396,7 @@ a {
 .video {
   background: radial-gradient(circle at 50% 90%, #606060 0, #2e2e2e 100%);
   padding-top: 60px;
+  padding-bottom: 40px;
   text-align: center;
   position: relative;
 }
@@ -712,7 +713,7 @@ a {
 }
 
 .footer__nav-list {
-  padding: 40px 0;
+  padding: 20px 0;
   background-color: var(--ui-dark-color);
   justify-content: center;
 }
@@ -760,6 +761,7 @@ a {
 
 .footer__cancel {
   margin: 30px 0 0 0;
+  padding: 0 10px;
   font-size: 0.7rem;
 }
 
@@ -777,6 +779,13 @@ a {
 @media (max-width: 1120px) {
   .header__for-cutting {
     display: none;
+  }
+
+  .capture-form {
+    background-image: url("../images/Mount_Everest.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -872,6 +881,10 @@ a {
     padding-left: 0;
   }
 
+  .footer__nav-list {
+    display: none;
+  }
+
   .nav__divider {
     display: none;
   }
@@ -918,6 +931,10 @@ a {
   .reasons__reason-box::before {
     top: 0;
     transform: none;
+  }
+
+  .capture-form {
+    padding: 100px 0;
   }
 
 }
@@ -990,6 +1007,10 @@ a {
   .video__youtube-button {
     bottom: 40%;
   }
+
+  .footer__info-block {
+    padding-top: 60px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1003,5 +1024,9 @@ a {
 
   .promo::after {
     display: none;
+  }
+
+  .capture-form__phone-input {
+    width: 210px;
   }
 }
