@@ -12,15 +12,20 @@
 </head>
 <body>
 
-<header class="header" id="main">
+<header class="header" id="header">
     <div class="container">
         <div class="header__inner">
+            <button class="header__mobile-menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="header__logo-block">
                 <img src="images/logo.png" alt="Логотип сайта air robots .ru" class="header__logo">
                 <div class="header__title-block">
-                    <h1 class="header__title">Квадрокоптеры DJI для фото и видеосъемки</h1>
-                    <p class="header__subtitle">Продажа квадрокоптеров с бесплатной доставкой до двери по всей
-                        России</p>
+                    <h1 class="header__title">Квадрокоптеры DJI <span class="header__for-cutting">для фото и видеосъемки</span></h1>
+                    <p class="header__subtitle">Продажа квадрокоптеров <span class="header__for-cutting">с бесплатной доставкой до двери по всей
+                        России</span></p>
                 </div>
             </div>
             <div class="header__contacts">
@@ -37,25 +42,29 @@
         <nav class="nav" id="nav">
             <div class="container">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#main" class="nav__link">Главная</a></li>
-                    <li>/</li>
+                    <li class="nav__item"><a href="#header" class="nav__link">Главная</a></li>
+                    <li class="nav__divider">/</li>
                     <li class="nav__item"><a href="#video" class="nav__link">Видео</a></li>
-                    <li>/</li>
+                    <li class="nav__divider">/</li>
                     <li class="nav__item"><a href="#reasons" class="nav__link">Наши преимущества</a></li>
-                    <li>/</li>
+                    <li class="nav__divider">/</li>
                     <li class="nav__item"><a href="#products" class="nav__link">Характеристики и цены</a></li>
                 </ul>
+
             </div>
         </nav>
 
         <div class="container">
             <h2 class="promo__title">Снимай необычные кадры с помощью<br>профессиональных квадрокоптеров DJI</h2>
+            <h2 class="promo__title-mobile">Квадрокоптеры DJI<br>для фото и видеосъемки</h2>
             <form class="promo__form">
                 <label for="promo__phone-input" class="promo__call-to-action">Оставь свой номер – и получи подарков на 3
                     000 рублей</label>
                 <div class="promo__phone-input-box">
-                    <input type="text" class="promo__phone-input" id="promo__phone-input"
-                           placeholder="Ваш номер телефона">
+                    <div class="promo__phone-input-wrapper">
+                        <input type="text" class="promo__phone-input" id="promo__phone-input"
+                               placeholder="Ваш номер телефона">
+                    </div>
                     <button class="promo__submit-button" type="submit">Отправить</button>
                 </div>
             </form>
@@ -118,167 +127,167 @@
         </div>
     </section>
 
-    <section class="video" id="video">
-        <div class="container">
-            <h2 class="video__title">Прямая трансляция на экране<br>твоего смартфона</h2>
-            <img src="images/video-phones.png" alt="Декоративное изображение экранов телефонов" class="video__phones">
-            <a class="video__youtube-button"></a>
-        </div>
-    </section>
+<!--    <section class="video" id="video">-->
+<!--        <div class="container">-->
+<!--            <h2 class="video__title">Прямая трансляция на экране<br>твоего смартфона</h2>-->
+<!--            <img src="images/video-phones.png" alt="Декоративное изображение экранов телефонов" class="video__phones">-->
+<!--            <a class="video__youtube-button"></a>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <section class="reasons" id="reasons">
-        <div class="container">
-            <h2 class="reasons__title">Почему нужно покупать на Airrobots.ru?</h2>
-            <div class="reasons__inner">
-                <img src="images/reasons-product.png" alt="Коробка с квадрокоптером" class="reasons__product-img">
-                <dl class="reasons__list">
-                    <div class="reasons__reason-box reason-1">
-                        <dt class="reasons__reason-title">
-                            Бесплатная доставка по России до двери
-                        </dt>
-                        <dd class="reasons__reason-desc">
-                            Мало кто из наших конкурентов предложит бесплатную доставку непосредственно до вашей
-                            квартиры.
-                        </dd>
-                    </div>
+<!--    <section class="reasons" id="reasons">-->
+<!--        <div class="container">-->
+<!--            <h2 class="reasons__title">Почему нужно покупать на Airrobots.ru?</h2>-->
+<!--            <div class="reasons__inner">-->
+<!--                <img src="images/reasons-product.png" alt="Коробка с квадрокоптером" class="reasons__product-img">-->
+<!--                <dl class="reasons__list">-->
+<!--                    <div class="reasons__reason-box reason-1">-->
+<!--                        <dt class="reasons__reason-title">-->
+<!--                            Бесплатная доставка по России до двери-->
+<!--                        </dt>-->
+<!--                        <dd class="reasons__reason-desc">-->
+<!--                            Мало кто из наших конкурентов предложит бесплатную доставку непосредственно до вашей-->
+<!--                            квартиры.-->
+<!--                        </dd>-->
+<!--                    </div>-->
 
-                    <div class="reasons__reason-box reason-2">
-                        <dt class="reasons__reason-title">
-                            Без предоплаты
-                        </dt>
-                        <dd class="reasons__reason-desc">
-                            Оплата производится только по факту получения квадрокоптера - мы вам доверяем.
-                        </dd>
-                    </div>
-                    <div class="reasons__reason-box reason-3">
-                        <dt class="reasons__reason-title">
-                            Поставки от официального дистрибьютора
-                        </dt>
-                        <dd class="reasons__reason-desc">
-                            Мы работаем с официальным дистрибьютором DJI в России. И продаем квадрокоптеры по ценам
-                            дистрибьютора. Никаких переплат с вашей стороны.
-                        </dd>
-                    </div>
-                    <div class="reasons__reason-box reason-4">
-                        <dt class="reasons__reason-title">
-                            Гарантия
-                        </dt>
-                        <dd class="reasons__reason-desc">
-                            На все наши квадрокоптеры распространяется гарантия 1 год.
-                        </dd>
-                    </div>
-                </dl>
-            </div>
-        </div>
-    </section>
+<!--                    <div class="reasons__reason-box reason-2">-->
+<!--                        <dt class="reasons__reason-title">-->
+<!--                            Без предоплаты-->
+<!--                        </dt>-->
+<!--                        <dd class="reasons__reason-desc">-->
+<!--                            Оплата производится только по факту получения квадрокоптера - мы вам доверяем.-->
+<!--                        </dd>-->
+<!--                    </div>-->
+<!--                    <div class="reasons__reason-box reason-3">-->
+<!--                        <dt class="reasons__reason-title">-->
+<!--                            Поставки от официального дистрибьютора-->
+<!--                        </dt>-->
+<!--                        <dd class="reasons__reason-desc">-->
+<!--                            Мы работаем с официальным дистрибьютором DJI в России. И продаем квадрокоптеры по ценам-->
+<!--                            дистрибьютора. Никаких переплат с вашей стороны.-->
+<!--                        </dd>-->
+<!--                    </div>-->
+<!--                    <div class="reasons__reason-box reason-4">-->
+<!--                        <dt class="reasons__reason-title">-->
+<!--                            Гарантия-->
+<!--                        </dt>-->
+<!--                        <dd class="reasons__reason-desc">-->
+<!--                            На все наши квадрокоптеры распространяется гарантия 1 год.-->
+<!--                        </dd>-->
+<!--                    </div>-->
+<!--                </dl>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <section class="products" id="products">
-        <h2 class="products__title">
-            Выбери свой комплект на базе DJI Phantom 2
-        </h2>
-        <div class="container">
-            <ul class="products__list">
+<!--    <section class="products" id="products">-->
+<!--        <h2 class="products__title">-->
+<!--            Выбери свой комплект на базе DJI Phantom 2-->
+<!--        </h2>-->
+<!--        <div class="container">-->
+<!--            <ul class="products__list">-->
 
-                <li class="products__product-card">
-                    <div class="products__upper-block">
-                        <img src="images/products-1.png" alt="Изображение квадрокоптера Phantom 2"
-                             class="products__product-image">
-                        <div class="products__upper-block-desc">
-                            <p class="products__price">
-                                38 430 руб.
-                            </p>
-                            <p>Купите сейчас и получите подарок на 3000 рублей</p>
-                            <button class="products__order-button">Купить</button>
-                        </div>
-                    </div>
-                    <h3 class="products__product-title">Phantom 2</h3>
-                    <p class="products__product-desc">Универсальная платформа, на которую можно установить любой подвес
-                        и камеру.</p>
-                    <ul class="products__advantages">
-                        <li class="products__advantage">Бесплатная доставка по России.</li>
-                        <li class="products__advantage">В комплекте - пульт дистанционного управления с возможностью
-                            крепления собственного смартфона / планшета.
-                        </li>
-                        <li class="products__advantage">Радиус действия - 1000 метров.</li>
-                        <li class="products__advantage">Время непрерывного полета на 1 батарее - 25 минут.</li>
-                        <li class="products__advantage">Максимальная скорость полета - 15 м/c.</li>
-                        <li class="products__advantage">Вес - 1 кг.</li>
-                    </ul>
-                    <button class="products__more-details">Подробнее</button>
-                </li>
+<!--                <li class="products__product-card">-->
+<!--                    <div class="products__upper-block">-->
+<!--                        <img src="images/products-1.png" alt="Изображение квадрокоптера Phantom 2"-->
+<!--                             class="products__product-image">-->
+<!--                        <div class="products__upper-block-desc">-->
+<!--                            <p class="products__price">-->
+<!--                                38 430 руб.-->
+<!--                            </p>-->
+<!--                            <p>Купите сейчас и получите подарок на 3000 рублей</p>-->
+<!--                            <button class="products__order-button">Купить</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <h3 class="products__product-title">Phantom 2</h3>-->
+<!--                    <p class="products__product-desc">Универсальная платформа, на которую можно установить любой подвес-->
+<!--                        и камеру.</p>-->
+<!--                    <ul class="products__advantages">-->
+<!--                        <li class="products__advantage">Бесплатная доставка по России.</li>-->
+<!--                        <li class="products__advantage">В комплекте - пульт дистанционного управления с возможностью-->
+<!--                            крепления собственного смартфона / планшета.-->
+<!--                        </li>-->
+<!--                        <li class="products__advantage">Радиус действия - 1000 метров.</li>-->
+<!--                        <li class="products__advantage">Время непрерывного полета на 1 батарее - 25 минут.</li>-->
+<!--                        <li class="products__advantage">Максимальная скорость полета - 15 м/c.</li>-->
+<!--                        <li class="products__advantage">Вес - 1 кг.</li>-->
+<!--                    </ul>-->
+<!--                    <button class="products__more-details">Подробнее</button>-->
+<!--                </li>-->
 
-                <li class="products__product-card">
-                    <div class="products__upper-block">
-                        <img src="images/products-2.png"
-                             alt="Изображение квадрокоптера Phantom 2 с подвесом для камеры Zenmuse H4-3D"
-                             class="products__product-image">
-                        <div class="products__upper-block-desc">
-                            <p class="products__price">59 360 руб.</p>
-                            <p>Купите сейчас и получите подарок на 3000 рублей</p>
-                            <button class="products__order-button">Купить</button>
-                        </div>
-                    </div>
-                    <h3 class="products__product-title">Phantom 2 с подвесом Zenmuse H4-3D</h3>
-                    <p class="products__product-desc">Квадрокоптер готов для установки экшн камеры GoPro Hero4. Zenmuse
-                        H4-3D - высокоточная 3-х осевая система стабилизации для экшен камеры.</p>
-                    <ul class="products__advantages">
-                        <li class="products__advantage">Бесплатная доставка по России.</li>
-                        <li class="products__advantage">В комплекте - пульт дистанционного управления с возможностью
-                            крепления собственного смартфона / планшета.
-                        </li>
-                        <li class="products__advantage">Радиус действия - 1000 метров.</li>
-                        <li class="products__advantage">Время непрерывного полета на 1 батарее - 25 минут.</li>
-                        <li class="products__advantage">Максимальная скорость полета - 15 м/c.</li>
-                        <li class="products__advantage">Вес - 1 кг.</li>
-                    </ul>
-                    <button class="products__more-details">Подробнее</button>
-                </li>
+<!--                <li class="products__product-card">-->
+<!--                    <div class="products__upper-block">-->
+<!--                        <img src="images/products-2.png"-->
+<!--                             alt="Изображение квадрокоптера Phantom 2 с подвесом для камеры Zenmuse H4-3D"-->
+<!--                             class="products__product-image">-->
+<!--                        <div class="products__upper-block-desc">-->
+<!--                            <p class="products__price">59 360 руб.</p>-->
+<!--                            <p>Купите сейчас и получите подарок на 3000 рублей</p>-->
+<!--                            <button class="products__order-button">Купить</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <h3 class="products__product-title">Phantom 2 с подвесом Zenmuse H4-3D</h3>-->
+<!--                    <p class="products__product-desc">Квадрокоптер готов для установки экшн камеры GoPro Hero4. Zenmuse-->
+<!--                        H4-3D - высокоточная 3-х осевая система стабилизации для экшен камеры.</p>-->
+<!--                    <ul class="products__advantages">-->
+<!--                        <li class="products__advantage">Бесплатная доставка по России.</li>-->
+<!--                        <li class="products__advantage">В комплекте - пульт дистанционного управления с возможностью-->
+<!--                            крепления собственного смартфона / планшета.-->
+<!--                        </li>-->
+<!--                        <li class="products__advantage">Радиус действия - 1000 метров.</li>-->
+<!--                        <li class="products__advantage">Время непрерывного полета на 1 батарее - 25 минут.</li>-->
+<!--                        <li class="products__advantage">Максимальная скорость полета - 15 м/c.</li>-->
+<!--                        <li class="products__advantage">Вес - 1 кг.</li>-->
+<!--                    </ul>-->
+<!--                    <button class="products__more-details">Подробнее</button>-->
+<!--                </li>-->
 
-            </ul>
-        </div>
-    </section>
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <section class="capture-form">
-        <div class="container">
-            <h2 class="capture-form__title">
-                <label for="capture-form__phone-input">
-                    Еще думаете? Оставьте свой номер,<br>
-                    Мы поможем определиться
-                </label>
-            </h2>
-            <form class="capture-form__form">
-                <div class="capture-form__phone-input-box">
-                    <input type="text" class="capture-form__phone-input" id="capture-form__phone-input"
-                           placeholder="Ваш номер телефона">
-                </div>
-                <button class="capture-form__submit-button" type="submit">Отправить</button>
-            </form>
-        </div>
-    </section>
+<!--    <section class="capture-form">-->
+<!--        <div class="container">-->
+<!--            <h2 class="capture-form__title">-->
+<!--                <label for="capture-form__phone-input">-->
+<!--                    Еще думаете? Оставьте свой номер,<br>-->
+<!--                    Мы поможем определиться-->
+<!--                </label>-->
+<!--            </h2>-->
+<!--            <form class="capture-form__form">-->
+<!--                <div class="capture-form__phone-input-box">-->
+<!--                    <input type="text" class="capture-form__phone-input" id="capture-form__phone-input"-->
+<!--                           placeholder="Ваш номер телефона">-->
+<!--                </div>-->
+<!--                <button class="capture-form__submit-button" type="submit">Отправить</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </section>-->
 
 </main>
 
-<footer class="footer">
-        <ul class="nav__list footer__nav-list">
-            <li class="nav__item"><a href="#main" class="nav__link">Главная</a></li>
-            <li>/</li>
-            <li class="nav__item"><a href="#video" class="nav__link">Видео</a></li>
-            <li>/</li>
-            <li class="nav__item"><a href="#reasons" class="nav__link">Наши преимущества</a></li>
-            <li>/</li>
-            <li class="nav__item"><a href="#products" class="nav__link">Характеристики и цены</a></li>
-        </ul>
+<!--<footer class="footer">-->
+<!--        <ul class="nav__list footer__nav-list">-->
+<!--            <li class="nav__item"><a href="#header" class="nav__link">Главная</a></li>-->
+<!--            <li>/</li>-->
+<!--            <li class="nav__item"><a href="#video" class="nav__link">Видео</a></li>-->
+<!--            <li>/</li>-->
+<!--            <li class="nav__item"><a href="#reasons" class="nav__link">Наши преимущества</a></li>-->
+<!--            <li>/</li>-->
+<!--            <li class="nav__item"><a href="#products" class="nav__link">Характеристики и цены</a></li>-->
+<!--        </ul>-->
 
-        <div class="footer__info-block">
-            <p class="footer__company-name">ООО 'Адамант'</p>
-            <a class="footer__phone" href="tel:83433285504">+7 (343) 328 55 04</a>
-            <a class="footer__mail" href="mailto:help@airrobots.ru">help@airrobots.ru</a>
-            <p class="footer__cancel">
-                Вся предоставленная информация не является публичной офертой
-                <br>Цены и комплектация могут отличаться от указанных.
-            </p>
-        </div>
-</footer>
+<!--        <div class="footer__info-block">-->
+<!--            <p class="footer__company-name">ООО 'Адамант'</p>-->
+<!--            <a class="footer__phone" href="tel:83433285504">+7 (343) 328 55 04</a>-->
+<!--            <a class="footer__mail" href="mailto:help@airrobots.ru">help@airrobots.ru</a>-->
+<!--            <p class="footer__cancel">-->
+<!--                Вся предоставленная информация не является публичной офертой-->
+<!--                <br>Цены и комплектация могут отличаться от указанных.-->
+<!--            </p>-->
+<!--        </div>-->
+<!--</footer>-->
 
 </body>
 </html>

@@ -12,27 +12,37 @@ navbarLinks[0].classList.add("active");
 // Нам нужно будет прибавлять ему padding того же размера, что блок меню, когда будем меню доставать из потока
 const container = document.getElementById("promo");
 
-window.addEventListener("scroll", e => {
+// Sticky nav menu should work only for big devices (not mobile)
+if (document.documentElement.clientWidth > 780) {
+  window.addEventListener("scroll", e => {
 
-  const scrollPos = window.scrollY;
+    const scrollPos = window.scrollY;
 
-  if (scrollPos > navPos) {
-    navbar.classList.add('fixed');
-    container.classList.add('navbarOffsetMargin');
-  } else {
-    navbar.classList.remove('fixed');
-    container.classList.remove('navbarOffsetMargin');
-  }
-
-  navbarLinks.forEach(link => {
-    // Получаем блок на сайте, на который указывает ссылка в пункте меню
-    const section = document.querySelector(link.hash);
-
-    // Проверяем, доскроллил ли пользователь до данного блока или нет
-    if (scrollPos + 80 > section.offsetTop && scrollPos + 80 < section.offsetTop + section.offsetHeight) {
-      link.classList.add("active");
+    if (scrollPos > navPos) {
+      navbar.classList.add('fixed');
+      container.classList.add('navbarOffsetMargin');
     } else {
-      link.classList.remove("active");
+      navbar.classList.remove('fixed');
+      container.classList.remove('navbarOffsetMargin');
     }
+
+    navbarLinks.forEach(link => {
+      // Получаем блок на сайте, на который указывает ссылка в пункте меню
+      const section = document.querySelector(link.hash);
+
+      // Проверяем, доскроллил ли пользователь до данного блока или нет
+      if (scrollPos + 80 > section.offsetTop && scrollPos + 80 < section.offsetTop + section.offsetHeight) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
   });
+}
+
+/**** Open / Close Mobile Menu ****/
+const mobileMenuButton = document.getElementsByClassName("header__mobile-menu-button")[0];
+
+mobileMenuButton.addEventListener('click', () => {
+  navbar.classList.toggle("open");
 });

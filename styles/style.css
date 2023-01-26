@@ -65,6 +65,10 @@ a {
   justify-content: space-between;
 }
 
+.header__mobile-menu-button {
+  display: none;
+}
+
 .header__logo-block {
   display: flex;
   align-items: center;
@@ -104,13 +108,14 @@ a {
   text-decoration: none;
   color: inherit;
   position: relative;
+  padding-left: 46px;
 }
 
 .header__phone-number::before {
   content: "";
   position: absolute;
   top: -6px;
-  left: -46px;
+  left: 0;
   background-image: url("../images/phone-header.png");
   width: 32px;
   height: 32px;
@@ -147,18 +152,26 @@ a {
 .promo::after {
   content: "";
   background-image: url("../images/copter.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   width: 667px;
   height: 318px;
   position: absolute;
   bottom: -95px;
   left: 50%;
-  transform: translateX(-335px);
+  transform: translateX(-50%);
 }
 
-.promo__title {
+.promo__title,
+.promo__title-mobile {
   margin-top: 100px;
   margin-bottom: 50px;
   text-transform: uppercase;
+}
+
+.promo__title-mobile {
+  display: none;
 }
 
 .promo__form {
@@ -169,7 +182,7 @@ a {
 
 .promo__call-to-action {
   background-color: var(--background-color-black);
-  padding: 15px 10px;
+  padding: 15px 10px 15px 59px;
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
@@ -181,7 +194,7 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-  left: -49px;
+  left: 0;
   background-image: url("../images/gift.png");
   background-size: cover;
 }
@@ -192,13 +205,18 @@ a {
   height: 49px;
 }
 
-.promo__phone-input-box::before {
+.promo__phone-input-wrapper {
+  position: relative;
+  padding-left: 49px;
+}
+
+.promo__phone-input-wrapper::before {
   content: "";
   width: 49px;
   height: 100%;
   position: absolute;
   top: 0;
-  left: -49px;
+  left: 0;
   background-image: url("../images/phone-blue.png");
   background-size: cover;
 }
@@ -208,7 +226,6 @@ a {
   padding: 15px 10px;
   background-color: var(--background-color-main);
   border: none;
-  position: relative;
 }
 
 .promo__submit-button {
@@ -737,4 +754,163 @@ a {
 .footer__cancel {
   margin: 30px 0 0 0;
   font-size: 0.7rem;
+}
+
+/******************/
+/***** Mobile *****/
+/******************/
+
+@media (max-width: 1120px) {
+  .header__for-cutting {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .advantages__wrapper {
+    flex-direction: column;
+  }
+
+  .advantages__column {
+    width: 100%;
+    max-width: 612px;
+  }
+
+  .advantages__column-left {
+    padding-right: 0;
+    padding-left: 84px;
+    text-align: left;
+  }
+
+  .advantages__column-right {
+    padding-left: 84px;
+  }
+
+  .adv-1::after,
+  .adv-2::after,
+  .adv-3::after {
+    right: auto;
+    left: -84px;
+    top: 0;
+    transform: none;
+  }
+
+  .adv-4::after,
+  .adv-5::after,
+  .adv-6::after {
+    left: -84px;
+    top: 0;
+    transform: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .header__mobile-menu-button {
+    width: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 7px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .header__mobile-menu-button span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--background-color-ui-dark);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    display: block;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.95);
+    height: 100vh;
+    z-index: 5;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 140px;
+    padding-left: 0;
+  }
+
+  .nav__divider {
+    display: none;
+  }
+
+  .promo {
+    padding-top: 1px;
+  }
+
+  .header__logo-block,
+  .header__call-me {
+    display: none;
+  }
+
+  .promo__title {
+    display: none;
+  }
+
+  .promo__title-mobile {
+    display: block;
+  }
+
+  .promo__call-to-action {
+    display: none;
+  }
+
+  .promo::after {
+    width: 70%;
+  }
+
+  .advantages {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 570px) {
+  .promo__phone-input-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .promo::after {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px){
+  .advantages {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .promo {
+    min-height: calc(100vh - 63px);
+  }
+
+  .promo__phone-input {
+    width: 230px;
+  }
+
+  .promo::after {
+    display: none;
+  }
 }
