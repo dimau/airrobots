@@ -308,6 +308,8 @@ a {
 
 .advantages__column {
   width: 612px;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -431,6 +433,7 @@ a {
 
 .reasons {
   padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .reasons__title {
@@ -446,8 +449,8 @@ a {
 }
 
 .reasons__product-img {
-  width: 426px;
-  height: 457px;
+  width: 40%;
+  height: 100%;
 }
 
 .reasons__list {
@@ -774,11 +777,19 @@ a {
 @media (max-width: 860px) {
   .advantages__wrapper {
     flex-direction: column;
+    gap: 30px;
+  }
+
+
+  .advantages__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   .advantages__column {
     width: 100%;
     max-width: 612px;
+    gap: 30px
   }
 
   .advantages__column-left {
@@ -891,6 +902,18 @@ a {
   .video__youtube-button {
     bottom: 45%;
   }
+
+  .reasons__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .reasons__reason-box::before {
+    top: 0;
+    transform: none;
+  }
+
 }
 
 @media (max-width: 570px) {
@@ -901,6 +924,14 @@ a {
 
   .promo::after {
     width: 90%;
+  }
+
+  .reasons__list {
+    padding-left: 92px;
+  }
+
+  .reasons__reason-box::before {
+    left: -92px;
   }
 }
 
