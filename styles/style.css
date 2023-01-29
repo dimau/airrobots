@@ -22,6 +22,8 @@
   --background-color-ui-dark: #393e43;
   --background-color-black: #000;
   --background-color-semiblack: #1e1e1e;
+  --background-color-gray: #a4a7aa;
+  --background-color-bright-gray: #434b50;
 }
 
 html {
@@ -765,6 +767,249 @@ a {
   font-size: 0.7rem;
 }
 
+/************************/
+/***** Modal window *****/
+/************************/
+
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  z-index: 99;
+}
+
+.modal_active {
+  visibility: visible;
+}
+
+.modal__window-wrap {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal__window {
+  margin: 50px 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #fff;
+  width: 600px;
+  max-width: 100%;
+  overflow: visible;
+  transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+  transform: scale(0.9); /* Легкая анимания при появлении */
+  opacity: 0; /* Легкая анимания при появлении */
+}
+
+.modal_active .modal__window {
+  transform: scale(1); /* Легкая анимания при появлении */
+  opacity: 1; /* Легкая анимания при появлении */
+}
+
+.modal__overlay {
+  position: fixed;
+  border:none;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.15s ease; /* Легкая анимация при появлении */
+  background-color: black;
+}
+
+.modal__overlay_active {
+  pointer-events: auto;
+  opacity: 0.6;
+}
+
+/* При открытии окна навешивается на html тег */
+/* Помогает отключить прокрутку страницы под модальным окном */
+.modal__opened {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.modal__close {
+  width: 59px;
+  height: 59px;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-image: url("../images/close.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal__close span {
+  display: none;
+}
+
+.modal__window-product-desc {
+  padding: 40px 40px 60px 40px;
+  width: 100%;
+  max-width: 990px;
+}
+
+.modal__window-order {
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 390px;
+}
+
+.modal__window-success {
+  padding: 40px 20px 15px 20px;
+  width: 100%;
+  max-width: 390px;
+  text-align: center;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal__desc {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.modal__main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.modal__form label {
+  display: none;
+}
+
+.modal__call-to-action {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.modal__name-input-box,
+.modal__phone-input-box {
+  position: relative;
+  height: 49px;
+  margin-left: 49px;
+  margin-bottom: 15px;
+}
+
+.modal__name-input-box::before,
+.modal__phone-input-box::before {
+  content: "";
+  width: 49px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -49px;
+  background-size: cover;
+}
+
+.modal__name-input-box::before {
+  background-image: url("../images/person-icon.png");
+}
+
+.modal__phone-input-box::before {
+  background-image: url("../images/phone-blue.png");
+}
+
+.modal__submit-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--ui-accent-color);
+  color: var(--font-color-light);
+  border: none;
+}
+
+.modal__input {
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+  background-color: var(--ui-dark-color);
+  border: none;
+  color: var(--font-color-light);
+}
+
+.modal__input::placeholder {
+  color: var(--font-color-light);
+}
+
+
+.modal__table-block {
+  flex-basis: 545px;
+}
+
+.modal__table {
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+  color: var(--font-color-light);
+  border-collapse: collapse;
+}
+
+.modal__table-header-row {
+  background-color: var(--background-color-gray);
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+}
+
+.modal__table tbody tr {
+  background-color: var(--background-color-bright-gray);
+  border-bottom: 1px solid white;
+}
+
+.modal__table th {
+  padding: 10px 15px;
+}
+
+.modal__table td {
+  padding: 7px 15px;
+}
+
+.modal__table td:first-child {
+  width: 66%;
+}
+
+.modal__smile {
+  margin-bottom: 30px;
+}
+
 /******************/
 /***** Mobile *****/
 /******************/
@@ -833,6 +1078,15 @@ a {
     top: 0;
     transform: none;
   }
+
+  .modal__main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal__window-product-desc .modal__form {
+    display: none;
+  }
 }
 
 @media (max-width: 780px) {
@@ -872,7 +1126,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     height: 100vh;
     z-index: 5;
     font-size: 1.5rem;
@@ -995,7 +1249,7 @@ a {
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .advantages {
     padding-top: 60px;
   }
