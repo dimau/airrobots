@@ -1,0 +1,46 @@
+.video {
+  background: radial-gradient(circle at 50% 90%, #606060 0, #2e2e2e 100%);
+  padding-top: 60px;
+  padding-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.video__title {
+  text-align: center;
+  color: var(--font-color-light);
+  text-transform: uppercase;
+  font-weight: normal;
+
+  @media (max-width: 500px) {
+    margin-top: 0;
+  }
+}
+
+.video__picture-box {
+  position: relative;
+}
+
+.video__phones {
+  width: 100%;
+  max-width: 951px;
+  max-height: 506px;
+}
+
+.video__youtube-button {
+  width: 83px;
+  height: 57px;
+  position: absolute;
+  bottom: 37%;
+  left: 50%;
+  transform: translateX(-41px);
+  background-image: url("./img/youtube.png");
+
+  @media (max-width: 780px) {
+    bottom: 45%;
+  }
+
+  @media (max-width: 500px) {
+    bottom: 40%;
+  }
+}

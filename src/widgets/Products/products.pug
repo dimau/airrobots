@@ -1,0 +1,29 @@
+mixin productAdvantage(desc)
+    li.products__advantage= desc
+
+mixin productCard(imgSrc, imgAlt, price, title, desc, dataModal)
+    li.products__product-card
+        .products__upper-block
+            img.products__product-image(src=require(imgSrc) alt= imgAlt)
+            .products__upper-block-desc
+                p.products__price= price
+                p Купите сейчас и получите подарок на 3000 рублей
+                button.products__order-button(data-modal="#modal-order") Купить
+        h3.products__product-title= title
+        p.products__product-desc= desc
+        ul.products__advantages
+            +productAdvantage("Бесплатная доставка по России.")
+            +productAdvantage("В комплекте - пульт дистанционного управления с возможностью крепления собственного смартфона / планшета.")
+            +productAdvantage("Радиус действия - 1000 метров.")
+            +productAdvantage("Время непрерывного полета на 1 батарее - 25 минут.")
+            +productAdvantage("Максимальная скорость полета - 15 м/c.")
+            +productAdvantage("Вес - 1 кг.")
+        button.products__more-details(data-modal= dataModal) Подробнее
+
+
+section#products.products
+    h2.products__title Выбери свой комплект на базе DJI Phantom 2
+    .container
+        ul.products__list
+            +productCard("./img/products-1.png", "Изображение квадрокоптера Phantom 2", "38 430 руб.", "Phantom 2", "Универсальная платформа, на которую можно установить любой подвес и камеру.", "#details-product-1")
+            +productCard("./img/products-2.png", "Изображение квадрокоптера Phantom 2 с подвесом для камеры Zenmuse H4-3D", "59 360 руб.", "Phantom 2 с подвесом Zenmuse H4-3D", "Квадрокоптер готов для установки экшн камеры GoPro Hero4. Zenmuse H4-3D - высокоточная 3-х осевая система стабилизации для экшен камеры.", "#details-product-2")

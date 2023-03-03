@@ -1,0 +1,45 @@
+:root {
+  --font-family-acrom: "Ushakov", sans-serif;
+  --font-color-light: #fff;
+  --font-color-dark: #000;
+  --font-color-gray: #626262;
+  --ui-accent-color: #0084dd;
+  --ui-dark-color: #252525;
+  --background-color-main: #f4f4f4;
+  --background-color-ui-dark: #393e43;
+  --background-color-black: #000;
+  --background-color-semiblack: #1e1e1e;
+  --background-color-gray: #a4a7aa;
+  --background-color-bright-gray: #434b50;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  line-height: 1.2;
+  font-family: var(--font-family-acrom);
+  color: var(--font-color-dark);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}

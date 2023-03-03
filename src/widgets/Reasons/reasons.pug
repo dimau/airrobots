@@ -1,0 +1,15 @@
+mixin reasonBlock(uniqueClass, title, desc)
+    .reasons__reason-box(class= uniqueClass)
+        dt.reasons__reason-title= title
+        dd.reasons__reason-desc= desc
+
+section#reasons.reasons
+    .container
+        h2.reasons__title Почему нужно покупать на Airrobots.ru?
+        .reasons__inner
+            img.reasons__product-img(src=require("./img/reasons-product.png") alt="Коробка с квадрокоптером")
+            dl.reasons__list
+                +reasonBlock("reason-1", "Бесплатная доставка по России до двери", "Мало кто из наших конкурентов предложит бесплатную доставку непосредственно до вашей квартиры.")
+                +reasonBlock("reason-2", "Без предоплаты", "Оплата производится только по факту получения квадрокоптера - мы вам доверяем.")
+                +reasonBlock("reason-3", "Поставки от официального дистрибьютора", "Мы работаем с официальным дистрибьютором DJI в России. И продаем квадрокоптеры по ценам дистрибьютора. Никаких переплат с вашей стороны.")
+                +reasonBlock("reason-4", "Гарантия", "На все наши квадрокоптеры распространяется гарантия 1 год.")

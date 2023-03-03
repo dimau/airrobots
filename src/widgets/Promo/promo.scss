@@ -1,0 +1,145 @@
+.promo {
+  position: relative;
+  background-image: url("./img/promo-back.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: calc(100vh - 100px - 90px);
+  color: var(--font-color-light);
+  text-align: center;
+
+  @media (max-width: 780px) {
+    padding-top: 1px;
+  }
+
+  @media (max-width: 400px) {
+    min-height: calc(100vh - 63px);
+  }
+}
+
+/* For sticky menu */
+.promo.navbarOffsetMargin {
+  padding-top: 39px;
+}
+
+.promo::after {
+  content: "";
+  background-image: url("./img/copter.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 667px;
+  height: 318px;
+  position: absolute;
+  bottom: -95px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 780px) {
+    width: 70%;
+  }
+
+  @media (max-width: 570px) {
+    width: 90%;
+  }
+
+  @media (max-width: 400px) {
+    display: none;
+  }
+}
+
+.promo__title {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
+}
+
+.promo__title-mobile {
+  display: none;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+
+  @media (max-width: 780px) {
+    display: block;
+  }
+}
+
+.promo__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promo__call-to-action {
+  background-color: var(--background-color-black);
+  padding: 15px 10px 15px 59px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
+}
+
+.promo__call-to-action::before {
+  content: "";
+  width: 49px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./img/gift.png");
+  background-size: cover;
+}
+
+.promo__phone-input-box {
+  position: relative;
+  display: flex;
+  height: 49px;
+
+  @media (max-width: 570px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.promo__phone-input-wrapper {
+  position: relative;
+  padding-left: 49px;
+}
+
+.promo__phone-input-wrapper::before {
+  content: "";
+  width: 49px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./img/phone-blue.png");
+  background-size: cover;
+}
+
+.promo__phone-input {
+  width: 300px;
+  padding: 15px 10px;
+  background-color: var(--background-color-main);
+  border: none;
+
+  @media (max-width: 400px) {
+    width: 230px;
+  }
+}
+
+.promo__submit-button {
+  height: 100%;
+  padding: 15px;
+  background-color: var(--ui-accent-color);
+  color: var(--font-color-light);
+  border: none;
+}

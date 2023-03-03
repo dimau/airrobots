@@ -1,0 +1,199 @@
+#modal-order.modal(aria-hidden="true")
+    .modal__window-wrap
+        .modal__window.modal__window-order(role="dialog" aria-modal="true" aria-labelledby="Форма заказа обратного звонка")
+            h3.modal__title Заполните форму, и наш менеджер свяжется с Вами в ближайшее время
+            form.modal__form
+                .modal__name-input-box
+                    label(for="modal__name-input-3") Укажите ваше имя
+                    input#modal__name-input-3.modal__input(type="text" placeholder="Ваше имя")
+                .modal__phone-input-box
+                    label(for="modal__phone-input-3") Укажите ваш номер телефона
+                    input#modal__phone-input-3.modal__input(type="tel" placeholder="Ваш телефон")
+                button.modal__submit-button(type="submit" data-modal="#modal-success") Отправить
+            button.modal__close(data-close)
+                span Close
+
+#modal-success.modal(aria-hidden="true")
+    .modal__window-wrap
+        .modal__window.modal__window-success(role="dialog" aria-modal="true" aria-labelledby="Подтверждение успешной отправки формы заказа обратного звонка")
+            img.modal__smile(src=require("./img/smile.png") alt="Улыбающийся смайлик")
+            h3.modal__title Благодарим вас за проявленный интерес. Мы скоро с вами свяжемся
+            button.modal__close(data-close)
+                span Close
+
+#details-product-1.modal(aria-hidden="true")
+    .modal__window-wrap
+        .modal__window.modal__window-product-desc(role="dialog" aria-modal="true" aria-labelledby="Характеристики квадрокоптера DJI Phantom 2")
+            h3.modal__title Квадрокоптер DJI PHANTOM 2
+            p.modal__desc Универсальная платформа, на которую можно установить любой подвес и камеру.
+            .modal__main-content
+                .modal__capture
+                    img(src=require("../../widgets/Products/img/products-1.png") alt="Квадрокоптер DJI Phantom 2")
+                    form.modal__form
+                        p.modal__call-to-action Купите сейчас и получите<br/>подарок на 3 000 рублей
+                        .modal__name-input-box
+                            label(for="modal__name-input") Укажите ваше имя
+                            input#modal__name-input.modal__input(type="text" placeholder="Ваше имя")
+                        .modal__phone-input-box
+                            label(for="modal__phone-input") Укажите ваш номер телефона
+                            input#modal__phone-input.modal__input(type="tel" placeholder="Ваш телефон")
+                        button.modal__submit-button(type="submit" data-modal="#modal-success") Отправить
+                .modal__table-block
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Основные характеристики
+                        tbody
+                            tr
+                                td Сборка
+                                td Готов к полету
+                            tr
+                                td Возможность установки камеры
+                                td Предусмотрена
+                            tr
+                                td GPS
+                                td Есть
+                            tr
+                                td Вес (с батареей и пропеллерами)
+                                td 1000 г.
+                            tr
+                                td Размер по диагонали
+                                td 35 см.
+
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Полетные характеристики
+                        tbody
+                            tr
+                                td Максимальный взлетный вес
+                                td 1300 г.
+                            tr
+                                td Максимальная скорость полета
+                                td 15 м/с
+                            tr
+                                td Максимальная скорость подъема
+                                td 6 м/с
+                            tr
+                                td Максимальное время полета
+                                td 25 мин.
+
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Батарея
+                        tbody
+                            tr
+                                td Тип батареи
+                                td 3S LiPo
+                            tr
+                                td Емкость батареи
+                                td 5200 mAh
+
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Управление
+                        tbody
+                            tr
+                                td Расстояние связи (открытое пространство)
+                                td 1000 м.
+                            tr
+                                td Батарея для пульта управления
+                                td Встроенная
+                            tr
+                                td Емкость батареи пульта управления
+                                td 2000 mAh
+
+            button.modal__close(data-close)
+                span Close
+
+#details-product-2.modal(aria-hidden="true")
+    .modal__window-wrap
+        .modal__window.modal__window-product-desc(role="dialog" aria-modal="true" aria-labelledby="Характеристики квадрокоптера PHANTOM 2 С ПОДВЕСОМ ZENMUSE H4-3D")
+            h3.modal__title Квадрокоптер PHANTOM 2 С ПОДВЕСОМ ZENMUSE H4-3D
+            p.modal__desc Квадрокоптер готов для установки экшн камеры GoPro Hero4. Zenmuse H4-3D - высокоточная 3-х осевая система стабилизации для экшен камеры.
+            .modal__main-content
+                .modal__capture
+                    img(src=require("../../widgets/Products/img/products-2.png") alt="Квадрокоптер DJI Phantom 2")
+                    form.modal__form
+                        p.modal__call-to-action Купите сейчас и получите<br/>подарок на 3 000 рублей
+                        .modal__name-input-box
+                            label(for="modal__name-input-2") Укажите ваше имя
+                            input#modal__name-input-2.modal__input(type="text" placeholder="Ваше имя")
+                        .modal__phone-input-box
+                            label(for="modal__phone-input-2") Укажите ваш номер телефона
+                            input#modal__phone-input-2.modal__input(type="tel" placeholder="Ваш телефон")
+                        button.modal__submit-button(type="submit" data-modal="#modal-success") Отправить
+                .modal__table-block
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Основные характеристики
+                        tbody
+                            tr
+                                td Сборка
+                                td Готов к полету
+                            tr
+                                td Возможность установки камеры
+                                td Предусмотрена
+                            tr
+                                td GPS
+                                td Есть
+                            tr
+                                td Вес (с батареей и пропеллерами)
+                                td 1000 г.
+                            tr
+                                td Размер по диагонали
+                                td 35 см.
+
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Полетные характеристики
+                        tbody
+                            tr
+                                td Максимальный взлетный вес
+                                td 1300 г.
+                            tr
+                                td Максимальная скорость полета
+                                td 15 м/с
+                            tr
+                                td Максимальная скорость подъема
+                                td 6 м/с
+                            tr
+                                td Максимальное время полета
+                                td 25 мин.
+
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Батарея
+                        tbody
+                            tr
+                                td Тип батареи
+                                td 3S LiPo
+                            tr
+                                td Емкость батареи
+                                td 5200 mAh
+
+                    table.modal__table
+                        thead
+                            tr.modal__table-header-row
+                                th(colspan="2") Управление
+                        tbody
+                            tr
+                                td Расстояние связи (открытое пространство)
+                                td 1000 м.
+                            tr
+                                td Батарея для пульта управления
+                                td Встроенная
+                            tr
+                                td Емкость батареи пульта управления
+                                td 2000 mAh
+
+            button.modal__close(data-close)
+                span Close
+
+
+

@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+        link(rel="icon" href="/favicon.ico" sizes="any")
+        title Air Robots
+
+        link(href=require('./main.layout.scss') rel='stylesheet')
+        block styles
+
+        script(defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js")
+        script(defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js")
+        script(defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js")
+        script(defer="defer" src=require("./main.layout.js"))
+        block scripts
+    body
+        include ../../widgets/Header/header
+        main.main
+            block content
+        include ../../widgets/Footer/footer

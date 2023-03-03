@@ -1,0 +1,18 @@
+mixin navItem(href, text)
+    li.nav__item
+        a.nav__link(href= href)= text
+
+footer.footer
+    ul.nav__list.footer__nav-list
+        +navItem("#header", "Главная")
+        li /
+        +navItem("#video", "Видео")
+        li /
+        +navItem("#reasons", "Наши преимущества")
+        li /
+        +navItem("#products", "Характеристики и цены")
+    .footer__info-block
+        p.footer__company-name ООО 'Адамант'
+        a.footer__phone(href="tel:83433285504") +7 (343) 328 55 04
+        a.footer__mail(href="mailto:help@airrobots.ru") help@airrobots.ru
+        p.footer__cancel Вся предоставленная информация не является публичной офертой <br>Цены и комплектация могут отличаться от указанных.

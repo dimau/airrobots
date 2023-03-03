@@ -40,41 +40,9 @@ if (document.documentElement.clientWidth > 780) {
   });
 }
 
-/*** Clearing input fields after submitting ***/
-document.querySelector(".capture-form__submit-button").addEventListener('click', () => {
-  document.querySelector(".capture-form__phone-input").value = "";
-});
-
-document.querySelector(".promo__submit-button").addEventListener('click', () => {
-  document.querySelector(".promo__phone-input").value = "";
-});
-
-const modalInputs = document.querySelectorAll(".modal__input");
-const submitFormButtons = document.querySelectorAll(".modal__submit-button");
-for (const button of submitFormButtons) {
-  button.addEventListener('click', () => {
-    for (const input of modalInputs) {
-      input.value = "";
-    }
-  });
-}
-
 /**** Open / Close Mobile Menu ****/
 const mobileMenuButton = document.getElementsByClassName("header__mobile-menu-button")[0];
 
 mobileMenuButton.addEventListener('click', () => {
   navbar.classList.toggle("open");
-});
-
-/**** Initialize Modal Window ****/
-const modal = new Modal({
-  linkAttributeName: 'data-modal',
-  beforeOpen: () => {
-    const html = document.documentElement;
-    html.style.scrollBehavior = "auto";
-  },
-  afterClose: () => {
-    const html = document.documentElement;
-    html.style.scrollBehavior = "smooth";
-  },
 });

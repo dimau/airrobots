@@ -1,0 +1,27 @@
+mixin navItem(href, text)
+    li.nav__item
+        a.nav__link(href= href)= text
+
+mixin divider()
+    li.nav__divider /
+
+section#promo.promo
+    nav#nav.nav
+        .container
+            ul.nav__list
+                +navItem("#header", "Главная")
+                +divider
+                +navItem("#video", "Видео")
+                +divider
+                +navItem("#reasons", "Наши преимущества")
+                +divider
+                +navItem("#products", "Характеристики и цены")
+    .container
+        h2.promo__title Снимай необычные кадры с помощью<br>профессиональных квадрокоптеров DJI
+        h2.promo__title-mobile Квадрокоптеры DJI<br>для фото и видеосъемки
+        form.promo__form
+            label.promo__call-to-action(for="promo__phone-input") Оставь свой номер – и получи подарков на 3 000 рублей
+            .promo__phone-input-box
+                .promo__phone-input-wrapper
+                    input#promo__phone-input.promo__phone-input(type="tel" placeholder="Ваш номер телефона")
+                button.promo__submit-button(type="submit" data-modal="#modal-success") Отправить

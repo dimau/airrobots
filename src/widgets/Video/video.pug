@@ -1,0 +1,9 @@
+section#video.video
+    .container
+        h2.video__title Прямая трансляция на экране<br>твоего смартфона
+        .video__picture-box
+            picture.video__phones
+                source(media="(min-width: 780px)" srcset=require("./img/video-phones.png"))
+                source(media="(min-width: 320px)" srcset=require("./img/back-photo.png"))
+                img.video__phones(src=require("./img/video-phones.png") alt="Декоративное изображение экранов телефонов")
+            a.video__youtube-button(href="https://youtu.be/PKggf17m4SE" target="_blank")
