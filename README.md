@@ -1,2 +1,2 @@
 # Airrobots
-You can look at the site — https://dimau.github.io/airrobots
+You can look at the site — https://dimau.github.io/airrobots-public/
